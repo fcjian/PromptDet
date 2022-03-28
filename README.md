@@ -30,8 +30,8 @@ For your convenience, we provide the following trained models (TOOD). All models
 
 Model | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Config | Download
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-PromptDet_R_50_FPN_1x | 12 | 640~800  | 800x800 | 19.0 | 18.5 | 25.8 | 21.4 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | [google](https://drive.google.com/file/d/1M7ccIsfQKA5pEtgMlRSadokLu_cFKO4B/view?usp=sharing) / [baidu](https://pan.baidu.com/s/1rjAwcX2rq5xTm7_9AdWR2Q)
-PromptDet_R_50_FPN_6x | 72 | 100~1280 | 800x800 | 21.4 | 23.3 | 29.3 | 25.3 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_6x_lvis_v1.py) | [google](https://drive.google.com/file/d/1G3Waqs3Xh7h1bfwcUfek91S1JKRCTAdV/view?usp=sharing) / [baidu](https://pan.baidu.com/s/1E_Lsxj4GXhe7iPL6feVa5Q)
+PromptDet_R_50_FPN_1x | 12 | 640~800  | 800x800 | 19.0 | 18.5 | 25.8 | 21.4 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | [google](https://drive.google.com/file/d/1JIl7om8BJGQSUtjlOgBvOBc7QXWiYSgM/view?usp=sharing) / [baidu]()
+PromptDet_R_50_FPN_6x | 72 | 100~1280 | 800x800 | 21.4 | 23.3 | 29.3 | 25.3 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_6x_lvis_v1.py) | [google](https://drive.google.com/file/d/19v9zqAdfYA2qZcF6zbKlWvDRQCtOtlGt/view?usp=sharing) / [baidu]()
 
 [0] *All results are obtained with a single model and without any test time data augmentation such as multi-scale, flipping and etc..* \
 [1] *Refer to more details in config files in `config/promptdet/`.* \
