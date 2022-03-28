@@ -26,7 +26,7 @@ To be updated.
 
 ## Models
 
-For your convenience, we provide the following trained models (TOOD). All models are trained with 16 images in a mini-batch.
+For your convenience, we provide the following trained models (PromptDet).
 
 Model | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Config | Download
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
@@ -48,7 +48,11 @@ Thanks MMDetection team for the wonderful open source project!
 If you find Prompt useful in your research, please consider citing:
 
 ```
-
+@inproceedings{feng2021promptdet,
+    title={PromptDet: Expand Your Detector Vocabulary with Uncurated Images},
+    author={Feng, Chengjian and Zhong, Yujie and Jie, Zequn and Chu, Xiangxiang and Ren, Haibing and Wei, Xiaolin and Xie, Weidi and Ma, Lin},
+    year={2022}
+}
 ```
 
 
