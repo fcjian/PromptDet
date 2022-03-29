@@ -49,7 +49,7 @@ model = dict(
             type='PromptBBoxHead',
             num_classes=1203,
             reg_class_agnostic=True,
-            embedding_file="resources/lvis_category_embeddings.pt",
+            embedding_file="embeddings/lvis_category_embeddings.pt",
             loss_cls=dict(
                 type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0),
         ),
