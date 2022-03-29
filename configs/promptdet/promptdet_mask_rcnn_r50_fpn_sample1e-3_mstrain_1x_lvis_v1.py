@@ -73,5 +73,5 @@ lr_config = dict(
     warmup_ratio=0.001,
     step=[8, 11])
 runner = dict(type='EpochBasedRunner', max_epochs=12)
-evaluation = dict(metric=['bbox', 'segm'], interval=12)
+evaluation = dict(metric=['bbox', 'segm'], interval=2)
 
