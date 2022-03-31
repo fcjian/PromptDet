@@ -45,7 +45,7 @@ Thanks MMDetection team for the wonderful open source project!
 
 ## Citation
 
-If you find Prompt useful in your research, please consider citing:
+If you find PromptDet useful in your research, please consider citing:
 
 ```
 @inproceedings{feng2022promptdet,
