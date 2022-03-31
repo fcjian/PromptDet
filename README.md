@@ -26,7 +26,7 @@ To be updated.
 
 ## Models
 
-For your convenience, we provide the following trained models (PromptDet).
+For your convenience, we provide the following trained models (PromptDet) with mask AP.
 
 Model | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Config | Download
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
