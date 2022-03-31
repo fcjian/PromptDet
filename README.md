@@ -48,9 +48,10 @@ Thanks MMDetection team for the wonderful open source project!
 If you find Prompt useful in your research, please consider citing:
 
 ```
-@inproceedings{feng2021promptdet,
+@inproceedings{feng2022promptdet,
     title={PromptDet: Expand Your Detector Vocabulary with Uncurated Images},
     author={Feng, Chengjian and Zhong, Yujie and Jie, Zequn and Chu, Xiangxiang and Ren, Haibing and Wei, Xiaolin and Xie, Weidi and Ma, Lin},
+    journal={arXiv preprint arXiv:2203.16513},
     year={2022}
 }
 ```
