@@ -1,6 +1,6 @@
 
 # PromptDet: Expand Your Detector  Vocabulary with Uncurated Images
-[Paper]() &nbsp; &nbsp; [Website](https://fcjian.github.io/promptdet)
+[Paper](https://arxiv.org/abs/2203.16513) &nbsp; &nbsp; [Website](https://fcjian.github.io/promptdet)
 
 ## Introduction
 
