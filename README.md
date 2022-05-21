@@ -19,7 +19,7 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 
 ```python
 # assume that you are under the root directory of this project,
-# and you have activated your virtual environment if needed.
+# and you have activated your virtual environment if needed,
 # and with LVIS v1.0 dataset in 'data/lvis_v1'.
 
 ./tools/dist_test.sh configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py work_dirs/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.pth 4 --eval bbox segm
