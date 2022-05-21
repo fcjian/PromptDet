@@ -49,9 +49,14 @@ model = dict(
             type='PromptBBoxHead',
             num_classes=1203,
             reg_class_agnostic=True,
-            embedding_file="embeddings/lvis_category_embeddings.pt",
+            embedding_file="promptdet_resources/lvis_category_embeddings.pt",
             loss_cls=dict(
-                type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0),
+                type='MaskedCrossEntropyLoss', 
+                use_sigmoid=True, 
+                loss_weight=1.0,
+                num_classes=1203,
+                base_ind_file="promptdet_resources/lvis_base_inds.txt" 
+            ),
         ),
         mask_head=dict(
             num_classes=1203, 
