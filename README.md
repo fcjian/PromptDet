@@ -18,20 +18,33 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 ## Inference
 
 ```python
+# assume that you are under the root directory of this project,
+# and you have activated your virtual environment if needed.
+# and with LVIS v1.0 dataset in 'data/lvis_v1'.
+
 ./tools/dist_test.sh configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py work_dirs/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.pth 4 --eval bbox segm
 ```
 
 ## Train
-To be updated.
+```python
+# first download 'lvis_v1_train_seen.json' to 'data/lvis_v1/annotations'.
+
+# train detector without self-training
+./tools/dist_test.sh configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py work_dirs/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.pth 4 --eval bbox segm
+
+# train detector with self-training
+# To be updated.
+```
+[0] *Annotation file of base categories: [lvis_v1_train_seen.json](https://drive.google.com/file/d/1dZQ5ytHgJPv4VgYOyjJerq4adc6GQkkd/view?usp=sharing).*
 
 ## Models
 
 For your convenience, we provide the following trained models (PromptDet) with mask AP.
 
-Model | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Config | Download
---- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-PromptDet_R_50_FPN_1x | 12 | 640~800  | 800x800 | 19.0 | 18.5 | 25.8 | 21.4 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | [google](https://drive.google.com/file/d/1JIl7om8BJGQSUtjlOgBvOBc7QXWiYSgM/view?usp=sharing) / [baidu]()
-PromptDet_R_50_FPN_6x | 72 | 100~1280 | 800x800 | 21.4 | 23.3 | 29.3 | 25.3 | [config](configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_6x_lvis_v1.py) | [google](https://drive.google.com/file/d/19v9zqAdfYA2qZcF6zbKlWvDRQCtOtlGt/view?usp=sharing) / [baidu]()
+Model | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Download
+--- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+PromptDet_R_50_FPN_1x | 12 | 640~800  | 800x800 | 19.0 | 18.5 | 25.8 | 21.4 | [google](https://drive.google.com/file/d/1JIl7om8BJGQSUtjlOgBvOBc7QXWiYSgM/view?usp=sharing) / [baidu]()
+PromptDet_R_50_FPN_6x | 72 | 100~1280 | 800x800 | 21.4 | 23.3 | 29.3 | 25.3 | [google](https://drive.google.com/file/d/19v9zqAdfYA2qZcF6zbKlWvDRQCtOtlGt/view?usp=sharing) / [baidu]()
 
 [0] *All results are obtained with a single model and without any test time data augmentation such as multi-scale, flipping and etc..* \
 [1] *Refer to more details in config files in `config/promptdet/`.* \
