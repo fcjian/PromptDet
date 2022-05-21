@@ -27,7 +27,7 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 
 ## Train
 ```python
-# first download 'lvis_v1_train_seen.json' to 'data/lvis_v1/annotations'.
+# download 'lvis_v1_train_seen.json' to 'data/lvis_v1/annotations'.
 
 # train detector without self-training
 ./tools/dist_train.sh configs/promptdet/promptdet_mask_rcnn_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py 4
