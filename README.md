@@ -1,5 +1,5 @@
 
-# PromptDet: Expand Your Detector  Vocabulary with Uncurated Images
+# PromptDet: Expand Your Detector  Vocabulary with Uncurated Images (ECCV 2022)
 [Paper](https://arxiv.org/abs/2203.16513) &nbsp; &nbsp; [Website](https://fcjian.github.io/promptdet)
 
 ## Introduction
