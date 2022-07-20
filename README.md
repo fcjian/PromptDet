@@ -29,7 +29,7 @@ python tools/promptdet/gen_category_embedding.py --model-file promptdet_resource
 
 # install the dependencies, download the laion400m 64GB index and metadata, and then retrival the LAION images
 pip install faiss-cpu==1.7.2 img2dataset==1.12.0 fire==0.4.0 h5py==3.6.0
-python tools/promptdet/retrieval_laion_image.py --indice-folder /mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/fengchengjian/backup/home/data/laion400m-64GB-index --metadata /mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/fengchengjian/backup/home/data/metadata.hdf5
+python tools/promptdet/retrieval_laion_image.py --indice-folder [laion400m-64GB-index] --metadata [metadata.hdf5]
 
 # download the LAION images
 python tools/promptdet/download_laion_image.py
