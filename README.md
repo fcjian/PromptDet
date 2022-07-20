@@ -22,7 +22,7 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 ## LAION-novel dataset
 For convenience, we provide the learned [prompt vectors](promptdet_resources/prompt_learner/lvis/model.pth.tar-6) and the [LAION-novel]() dataset for the readers to reproduct the results quickly.
 
-And you also can learn the prompt vectors using [RPL](https://github.com/fcjian/RPL), and generate the LAION-novel dataset using the [tools](tools/promptdet) of PromptDet as follows:
+And you also can learn the prompt vectors using the offline [RPL](https://github.com/fcjian/RPL), and generate the LAION-novel dataset using the [tools](tools/promptdet) of PromptDet as follows:
 ```python
 # generate the category embeddings
 python tools/promptdet/gen_category_embedding.py --model-file promptdet_resources/prompt_learner/lvis/model.pth.tar-6 --name-file promptdet_resources/lvis_category_and_description.txt --out-file promptdet_resources/lvis_category_embeddings.pt
