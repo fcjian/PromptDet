@@ -20,12 +20,12 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 - Please see [get_started.md](docs/get_started.md) for installation and the basic usage of MMDetection.
 
 ## LAION-novel dataset
-For convenience，we provide our [LAION-novel]() dataset to reproduct the results quickly.
+For convenience，we provide the learned [prompt vectors](promptdet_resources/prompt_learner/lvis/model.pth.tar-6) and the [LAION-novel]() dataset to reproduct the results quickly.
 
-And you also can generate the LAION-novel dataset using the [tools](tools/promptdet) of PromptDet as follows:
+And you also can learn the prompt vectors using [RPL](https://github.com/fcjian/RPL), and generate the LAION-novel dataset using the [tools](tools/promptdet) of PromptDet as follows:
 ```python
 # generate the category embeddings
-python tools/promptdet/gen_category_embedding.py --model-file promptdet_resources/prompt_learner/lvis/model.pth.tar-6 --name-file promptdet_resources/prompt_learner/lvis/category_and_description.txt --out-file promptdet_resources/lvis_category_embeddings.pt
+python tools/promptdet/gen_category_embedding.py --model-file promptdet_resources/prompt_learner/lvis/model.pth.tar-6 --name-file promptdet_resources/lvis_category_and_description.txt --out-file promptdet_resources/lvis_category_embeddings.pt
 
 # install the dependencies and retrival the LAION images
 pip install faiss-cpu==1.7.2 img2dataset==1.12.0 fire==0.4.0 h5py==3.6.0

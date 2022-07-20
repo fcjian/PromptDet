@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument('--metadata', help='LAION400M metadata')
     parser.add_argument('--text-features', default='promptdet_resources/lvis_category_embeddings.pt',
                         help='LVIS/COCO category embeddings')
-    parser.add_argument('--name-file', default='promptdet_resources/prompt_learner/lvis/category_and_description.txt',
+    parser.add_argument('--name-file', default='promptdet_resources/lvis_category_and_description.txt',
                         help='LVIS/COCO category name and description')
     parser.add_argument('--base-ind-file', default='promptdet_resources/lvis_base_inds.txt',
                         help='index of the LVIS/COCO base categories')

@@ -10,7 +10,7 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description='Convert Laion images of the LVIS novel categories to mmdetection format')
     parser.add_argument('--model-file', help='the model weight of the regional prompt learning')
-    parser.add_argument('--name-file', default='promptdet_resources/prompt_learner/lvis/category_and_description.txt',
+    parser.add_argument('--name-file', default='promptdet_resources/lvis_category_and_description.txt',
                         help='the category name and description')
     parser.add_argument('--out-file', default='promptdet_resources/lvis_category_embeddings.pt',
                         help='output path')
