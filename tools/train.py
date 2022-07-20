@@ -163,6 +163,15 @@ def main():
     model.init_weights()
 
     datasets = [build_dataset(cfg.data.train)]
+
+    cfg_data = cfg.get('data')
+    if 'train_uncurated' in cfg_data:
+        datasets_cls = build_dataset(cfg_data['train_uncurated'])
+        datasets.append(datasets_cls)
+        logger.info(f'sample size of uncurated dataset: {len(datasets[-1])}')
+
+    logger.info(f'number of the training datasets: {len(datasets)}')
+
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
         val_dataset.pipeline = cfg.data.train.pipeline

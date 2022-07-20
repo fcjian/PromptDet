@@ -424,15 +424,18 @@ class LVISV05Dataset(CocoDataset):
                     for idx, catId in enumerate(self.cat_ids):
                         # area range index 0: all area ranges
                         # max dets index -1: typically 100 per image
-                        nm = self.coco.load_cats(catId)[0]
-                        precision = precisions[:, :, idx, 0, -1]
+                        # nm = self.coco.load_cats(catId)[0]
+                        # precision = precisions[:, :, idx, 0, -1]
+                        precision = precisions[:, :, idx, 0]
                         precision = precision[precision > -1]
                         if precision.size:
                             ap = np.mean(precision)
                         else:
                             ap = float('nan')
+                        # results_per_category.append(
+                        #     (f'{nm["name"]}', f'{float(ap):0.3f}'))
                         results_per_category.append(
-                            (f'{nm["name"]}', f'{float(ap):0.3f}'))
+                            (self.CLASSES[idx], f'{float(ap):0.3f}'))
 
                     num_columns = min(6, len(results_per_category) * 2)
                     results_flatten = list(

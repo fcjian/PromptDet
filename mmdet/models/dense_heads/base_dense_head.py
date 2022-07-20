@@ -27,6 +27,7 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
                       gt_labels=None,
                       gt_bboxes_ignore=None,
                       proposal_cfg=None,
+                      ignore_neg=False,
                       **kwargs):
         """
         Args:
@@ -52,12 +53,32 @@ class BaseDenseHead(BaseModule, metaclass=ABCMeta):
             loss_inputs = outs + (gt_bboxes, img_metas)
         else:
             loss_inputs = outs + (gt_bboxes, gt_labels, img_metas)
-        losses = self.loss(*loss_inputs, gt_bboxes_ignore=gt_bboxes_ignore)
+        losses = self.loss(*loss_inputs, gt_bboxes_ignore=gt_bboxes_ignore, ignore_neg=ignore_neg)
         if proposal_cfg is None:
             return losses
         else:
             proposal_list = self.get_bboxes(*outs, img_metas, cfg=proposal_cfg)
             return losses, proposal_list
+
+    def get_proposals(self,
+                      x,
+                      img_metas,
+                      proposal_cfg=None):
+        """
+        Args:
+            x (list[Tensor]): Features from FPN.
+            img_metas (list[dict]): Meta information of each image, e.g.,
+                image size, scaling factor, etc.
+            proposal_cfg (mmcv.Config): Test / postprocessing configuration,
+                if None, test_cfg would be used
+
+        Returns:
+            tuple:
+                proposal_list (list[Tensor]): Proposals of each image.
+        """
+        outs = self(x)
+        proposal_list = self.get_bboxes(*outs, img_metas, cfg=proposal_cfg)
+        return proposal_list
 
     def simple_test(self, feats, img_metas, rescale=False):
         """Test function without test-time augmentation.

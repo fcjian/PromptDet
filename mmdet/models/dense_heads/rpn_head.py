@@ -48,7 +48,8 @@ class RPNHead(AnchorHead):
              bbox_preds,
              gt_bboxes,
              img_metas,
-             gt_bboxes_ignore=None):
+             gt_bboxes_ignore=None,
+             ignore_neg=False):
         """Compute losses of the head.
 
         Args:
@@ -72,7 +73,8 @@ class RPNHead(AnchorHead):
             gt_bboxes,
             None,
             img_metas,
-            gt_bboxes_ignore=gt_bboxes_ignore)
+            gt_bboxes_ignore=gt_bboxes_ignore,
+            ignore_neg=ignore_neg)
         return dict(
             loss_rpn_cls=losses['loss_cls'], loss_rpn_bbox=losses['loss_bbox'])
 

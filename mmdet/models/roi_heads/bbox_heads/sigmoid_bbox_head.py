@@ -256,17 +256,29 @@ class SigmoidBBoxHead(BaseModule):
              label_weights,
              bbox_targets,
              bbox_weights,
-             reduction_override=None):
+             reduction_override=None,
+             ignore_novel=False,
+             ignore_neg=False):
         losses = dict()
         if cls_score is not None:
             avg_factor = max(torch.sum(label_weights > 0).float().item(), 1.)
             if cls_score.numel() > 0:
-                loss_cls_ = self.loss_cls(
-                    cls_score,
-                    labels,
-                    label_weights,
-                    avg_factor=avg_factor,
-                    reduction_override=reduction_override)
+                if ignore_neg:
+                    loss_cls_ = self.loss_cls(
+                        cls_score,
+                        labels,
+                        bbox_weights.mean(-1),
+                        avg_factor=avg_factor,
+                        reduction_override=reduction_override,
+                        ignore_novel=ignore_novel)
+                else:
+                    loss_cls_ = self.loss_cls(
+                        cls_score,
+                        labels,
+                        label_weights,
+                        avg_factor=avg_factor,
+                        reduction_override=reduction_override,
+                        ignore_novel=ignore_novel)
                 if isinstance(loss_cls_, dict):
                     losses.update(loss_cls_)
                 else:

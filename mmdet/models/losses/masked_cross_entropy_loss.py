@@ -134,6 +134,7 @@ class MaskedCrossEntropyLoss(nn.Module):
                 avg_factor=None,
                 reduction_override=None,
                 ignore_index=None,
+                ignore_novel=False,
                 **kwargs):
         """Forward function.
 
@@ -150,6 +151,7 @@ class MaskedCrossEntropyLoss(nn.Module):
         Returns:
             torch.Tensor: The calculated loss.
         """
+
         assert reduction_override in (None, 'none', 'mean', 'sum')
         reduction = (
             reduction_override if reduction_override else self.reduction)
@@ -161,7 +163,12 @@ class MaskedCrossEntropyLoss(nn.Module):
                 self.class_weight, device=cls_score.device)
         else:
             class_weight = None
-            
+
+        if ignore_novel:
+            mask = self.mask
+        else:
+            mask = None
+
         loss_cls = self.loss_weight * self.cls_criterion(
             cls_score,
             label,
@@ -170,7 +177,7 @@ class MaskedCrossEntropyLoss(nn.Module):
             reduction=reduction,
             avg_factor=avg_factor,
             ignore_index=ignore_index,
-            mask=self.mask,
+            mask=mask,
             **kwargs)
         
         return loss_cls
