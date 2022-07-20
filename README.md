@@ -19,16 +19,6 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 
 - Please see [get_started.md](docs/get_started.md) for installation and the basic usage of MMDetection.
 
-## Inference
-
-```python
-# assume that you are under the root directory of this project,
-# and you have activated your virtual environment if needed,
-# and with LVIS v1.0 dataset in 'data/lvis_v1'.
-
-./tools/dist_test.sh configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py work_dirs/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.pth 4 --eval bbox segm
-```
-
 ## LAION-novel dataset
 For convenience，we provide our [LAION-novel]() dataset to reproduct the results quickly.
 
@@ -46,6 +36,16 @@ python tools/promptdet/download_laion_image.py
 
 # convert the LAION images to mmdetection format
 python tools/promptdet/laion_lvis_novel.py --data-path data/laion_lvis/images --out-file data/laion_lvis/laion_train.json --base-ind-file promptdet_resources/lvis_base_inds.txt
+```
+
+## Inference
+
+```python
+# assume that you are under the root directory of this project,
+# and you have activated your virtual environment if needed,
+# and with LVIS v1.0 dataset in 'data/lvis_v1'.
+
+./tools/dist_test.sh configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py work_dirs/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.pth 4 --eval bbox segm
 ```
 
 ## Train
