@@ -20,7 +20,7 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 - Please see [get_started.md](docs/get_started.md) for installation and the basic usage of MMDetection.
 
 ## LAION-novel dataset
-For convenience, we provide the learned [prompt vectors](promptdet_resources/prompt_learner/lvis/model.pth.tar-6) and the [LAION-novel]() dataset for the readers to reproduct the results quickly.
+For your convenience, we provide the learned [prompt vectors](promptdet_resources/prompt_learner/lvis/model.pth.tar-6) and the [LAION-novel]() dataset to reproduct the results quickly.
 
 And you also can learn the prompt vectors using the offline [RPL](https://github.com/fcjian/RPL), and generate the LAION-novel dataset using the [tools](tools/promptdet) of PromptDet as follows:
 ```python
@@ -64,7 +64,7 @@ python tools/promptdet/laion_lvis_novel.py --data-path data/laion_lvis/images --
 
 For your convenience, we provide the following trained models (PromptDet) with mask AP.
 
-Model | RPL | Self-train | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Download
+Model | RPL | Self-training | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Download
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 Baseline |  | | 12 | 640~800  | 800x800 | 7.4 | 17.2 | 26.1 | 19.0 | [google]() / [baidu]()
 [PromptDet_R_50_FPN_1x (w/o self-training)](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | &check; | | 12 | 640~800  | 800x800 | 11.5 | 19.4 | 26.7 | 20.9 | [google](https://drive.google.com/file/d/1vsqhieOcR_s1dt0JNikQqB8OgsTYJNH-/view?usp=sharing) / [baidu]()
