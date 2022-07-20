@@ -27,7 +27,7 @@ And you also can learn the prompt vectors using the offline [RPL](https://github
 # generate the category embeddings
 python tools/promptdet/gen_category_embedding.py --model-file promptdet_resources/prompt_learner/lvis/model.pth.tar-6 --name-file promptdet_resources/lvis_category_and_description.txt --out-file promptdet_resources/lvis_category_embeddings.pt
 
-# install the dependencies and retrival the LAION images
+# install the dependencies, download the laion400m 64GB index and metadata, and then retrival the LAION images
 pip install faiss-cpu==1.7.2 img2dataset==1.12.0 fire==0.4.0 h5py==3.6.0
 python tools/promptdet/retrieval_laion_image.py --indice-folder /mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/fengchengjian/backup/home/data/laion400m-64GB-index --metadata /mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/fengchengjian/backup/home/data/metadata.hdf5
 
