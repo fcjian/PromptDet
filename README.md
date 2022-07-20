@@ -9,7 +9,7 @@ The goal of this work is to establish a scalable pipeline for expanding an objec
 ## Training framework
 ![method overview](resources/promptdet.png)
 
-###updates
+**updates**
 - July 20, 2022: add the code for LAION-novel and self-training
 - March 28, 2022: initial release
 
@@ -76,7 +76,7 @@ Baseline |  | | 12 | 640~800  | 800x800 | 7.4 | 17.2 | 26.1 | 19.0 | [google]() 
 
 ## Acknowledgement
 
-Thanks MMDetection team for the wonderful open source project!
+Thanks [MMDetection](https://github.com/open-mmlab/mmdetection) team for the wonderful open source project!
 
 
 ## Citation
