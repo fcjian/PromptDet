@@ -16,7 +16,7 @@ def parse_args():
                         help='whether to retrieval the images of the base categories')
     parser.add_argument('--output-folder', default='data/laion_lvis/images',
                         help='output path')
-    parser.add_argument('--num-thread', type=int, default=5,
+    parser.add_argument('--num-thread', type=int, default=10,
                         help='the number of the thread to download the images')
     args = parser.parse_args()
     return args

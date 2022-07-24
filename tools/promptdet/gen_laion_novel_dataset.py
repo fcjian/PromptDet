@@ -88,6 +88,5 @@ def main():
     print(f'#novel categories: {number_class_save}')
 
 
-# python tools/promptdet/laion_lvis_novel.py --data-path data/laion_lvis/images --out-file data/laion_lvis/laion_train.json --base-ind-file promptdet_resources/lvis_base_inds.txt
 if __name__ == '__main__':
     main()

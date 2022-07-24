@@ -8,7 +8,7 @@ _tokenizer = _Tokenizer()
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Convert Laion images of the LVIS novel categories to mmdetection format')
+        description='Generate the category embeddings according to the prompt vectors')
     parser.add_argument('--model-file', help='the model weight of the regional prompt learning')
     parser.add_argument('--name-file', default='promptdet_resources/lvis_category_and_description.txt',
                         help='the category name and description')
@@ -139,9 +139,9 @@ class TextEncoder(nn.Module):
 def main():
     args = parse_args()
 
-    model_file = args.model_file # 'promptdet_resources/prompt_learner/lvis/model.pth.tar-6'
-    name_file = args.name_file # "promptdet_resources/prompt_learner/lvis/category_and_description.txt"
-    out_file = args.out_file # "promptdet_resources/lvis_category_embeddings_gen.pt"
+    model_file = args.model_file
+    name_file = args.name_file
+    out_file = args.out_file
 
     lines = open(name_file).readlines()
     names = [line.strip().split(' ')[-1] for line in lines]
