@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aaa4c73-20a2-475d-a9a5-7163db7580f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/promptdet_resources/prompt_learner/lvis/model.pth.tar-6" beforeDir="false" afterPath="$PROJECT_DIR$/promptdet_resources/prompt_learner/lvis/model.pth.tar-6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/promptdet/download_laion_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/promptdet/download_laion_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/promptdet/gen_category_embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/promptdet/gen_category_embedding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/promptdet/gen_laion_novel_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/promptdet/gen_laion_novel_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/promptdet/retrieval_laion_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/promptdet/retrieval_laion_image.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="164">
-                <caret line="69" column="262" selection-start-line="69" selection-start-column="262" selection-end-line="69" selection-end-column="262" />
+              <first_editor relative-caret-position="611">
+                <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
               </first_editor>
               <second_editor />
             </state>
@@ -77,22 +73,6 @@
               <item name="PromptDet" type="b2602c69:ProjectViewProjectNode" />
               <item name="PromptDet" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PromptDet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PromptDet" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PromptDet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PromptDet" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PromptDet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PromptDet" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="promptdet" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -102,7 +82,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RPL" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -126,18 +106,19 @@
       <option name="presentableId" value="Default" />
       <updated>1658671368729</updated>
       <workItem from="1658671371928" duration="875000" />
-      <workItem from="1658672497802" duration="671000" />
+      <workItem from="1658672497802" duration="1969000" />
+      <workItem from="1658674607556" duration="642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1546000" />
+    <option name="totallyTimeSpent" value="3486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -164,8 +145,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="164">
-            <caret line="69" column="262" selection-start-line="69" selection-start-column="262" selection-end-line="69" selection-end-column="262" />
+          <first_editor relative-caret-position="611">
+            <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
           </first_editor>
           <second_editor />
         </state>

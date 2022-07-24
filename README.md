@@ -72,7 +72,7 @@ Model | RPL | Self-training | Epochs | Scale Jitter | Input Size | AP<sub>novel 
 [PromptDet_R_50_FPN_1x](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py) | &check; | &check; | 12 | 640~800  | 800x800 | 19.5 | 18.2 | 25.6 | 21.3 | [google](https://drive.google.com/file/d/1OkQbe_uM8i5DhXT82HMOYMBo7v0atYZD/view?usp=sharing)
 
 [0] *All results are obtained with a single model and without any test time data augmentation such as multi-scale, flipping and etc..* \
-[1] *Refer to more details in config files in `config/promptdet/`.* \
+[1] *Refer to more details in config files in `config/promptdet/`.*
 
 ## Acknowledgement
 
