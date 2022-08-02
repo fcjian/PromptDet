@@ -68,7 +68,7 @@ For your convenience, we provide the following trained models (PromptDet) with m
 Model | RPL | Self-training | Epochs | Scale Jitter | Input Size | AP<sub>novel | AP<c>c | AP<sub>f | AP | Download
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
 [Baseline (manual prompt)](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_manual_prompt.py) |  | | 12 | 640~800  | 800x800 | 7.4 | 17.2 | 26.1 | 19.0 | [google](https://drive.google.com/file/d/1pROiDQF18S1Wl5L6C1mMqt9FapMoiICj/view?usp=sharing)
-[PromptDet_R_50_FPN_1x](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | &check; | | 12 | 640~800  | 800x800 | 11.5 | 19.4 | 26.7 | 20.9 | [google](https://drive.google.com/file/d/1vsqhieOcR_s1dt0JNikQqB8OgsTYJNH-/view?usp=sharing)
+[PromptDet_R_50_FPN_1x](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py) | &check; | | 12 | 640~800  | 800x800 | 11.5 | 19.4 | 26.7 | 20.9 | [google](https://drive.google.com/file/d/1ttBtc_nkcwWQzgGhzA-rkl4ZvWGKG0PX/view?usp=sharing)
 [PromptDet_R_50_FPN_1x](configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py) | &check; | &check; | 12 | 640~800  | 800x800 | 19.5 | 18.2 | 25.6 | 21.3 | [google](https://drive.google.com/file/d/1OkQbe_uM8i5DhXT82HMOYMBo7v0atYZD/view?usp=sharing)
 
 [0] *All results are obtained with a single model and without any test time data augmentation such as multi-scale, flipping and etc..* \
