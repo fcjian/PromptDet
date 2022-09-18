@@ -56,7 +56,7 @@ For your convenience, we also provide the [image urls](data/laion_lvis.tar.gz) o
 ./tools/dist_train.sh configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1.py 4
 
 # train detector with self-training
-./tools/dist_train.sh configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py 4 --resume-from work_dirs/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1/epoch_6.pth
+./tools/dist_train.sh configs/promptdet/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1_self_train.py 4
 ```
 [0] *Annotation file of base categories: [lvis_v1_train_seen.json](https://drive.google.com/file/d/1dZQ5ytHgJPv4VgYOyjJerq4adc6GQkkd/view?usp=sharing).* \
 [1] Note that we provide a [EpochPromptDetRunner](mmdet/core/utils/epoch_promptdet_runner.py) to fetch the data from mutilple datasets alternately.
