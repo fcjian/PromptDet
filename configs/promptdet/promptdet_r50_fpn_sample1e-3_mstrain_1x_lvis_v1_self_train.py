@@ -282,3 +282,4 @@ model = dict(
 find_unused_parameters = True
 runner = dict(type='EpochPromptDetRunner', max_epochs=12)
 evaluation = dict(metric=['bbox', 'segm'], interval=12)
+resume_from = 'work_dirs/promptdet_r50_fpn_sample1e-3_mstrain_1x_lvis_v1/epoch_6.pth'
